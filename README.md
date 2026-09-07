@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://t.me/White_List_111_bot">
-    <img src="https://img.shields.io/badge/Get%20the%20App-@White__List__111__bot-2CA5E0?style=for-the-badge&logo=telegram" alt="Get the App"/>
+    <img src="https://img.shields.io/badge/Register%20with%20the%20Bot-@White__List__111__bot-2CA5E0?style=for-the-badge&logo=telegram" alt="Get the App"/>
   </a>
   &nbsp;
   <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android" alt="Android"/>
@@ -249,7 +249,7 @@ Go to Settings → Apps → GpsTrack → Battery → select **Unrestricted**. Th
 Open a conversation with your tracker bot in the official Telegram app at least once before using GpsTrack.
 
 **Access screen appears after login**
-Make sure you registered with [@White_List_111_bot](https://t.me/White_List_111_bot) by sending `/start` first.
+Make sure you registered with [@White_List_111_bot](https://t.me/White_List_111_bot) by sending `/register` first.
 
 **Map shows no tiles**
 Check your internet connection. The map requires an active connection to load.
@@ -266,7 +266,6 @@ TUFC9s6Sf8npGnJh6jA9YVFjCD5m6X2Lwh
 ```
 > ⚠️ Network: **TRON (TRC20)** only. Any amount is appreciated 🙏
 
-Or send `/donate` to the bot.
 
 ---
 
