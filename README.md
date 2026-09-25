@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://t.me/White_List_111_bot">
-    <img src="https://img.shields.io/badge/Register%20with%20the%20Bot-@White__List__111__bot-2CA5E0?style=for-the-badge&logo=telegram" alt="Get the App"/>
+    <img src="https://img.shields.io/badge/Get%20the%20App-@White__List__111__bot-2CA5E0?style=for-the-badge&logo=telegram" alt="Get the App"/>
   </a>
   &nbsp;
   <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android" alt="Android"/>
@@ -23,7 +23,7 @@
 
 ## 🚀 What is GpsTrack?
 
-GpsTrack is an Android app that lets you track one or more GPS devices in real time on an interactive map. It uses **Telegram** as the communication layer — meaning your tracker sends location updates through a Telegram bot, and the app picks them up instantly.
+GpsTrack is an Android app that lets you track one or more GPS devices in real time on an interactive map. It uses **Telegram** as the communication layer — meaning your tracker sends location updates through a Telegram bot, and the app picks them up instantly. Your phone can also become the tracker: GpsTrack can broadcast its own GPS location out over Telegram the same way.
 
 No custom servers. No recurring fees. No ADS. Track unlimited devices, completely free.
 
@@ -34,6 +34,7 @@ No custom servers. No recurring fees. No ADS. Track unlimited devices, completel
 | Feature | Description |
 |---|---|
 | 📡 Live Tracking | See your device move on the map in real time |
+| 🛰️ Broadcast Mode | Turn your phone into a tracker — send its own location to any Telegram chat |
 | 🗺️ Interactive Map | Powered by OpenStreetMap — works worldwide |
 | 📜 Location History | Scrub through the full day timeline, second by second |
 | 🔋 Battery & Speed | See battery level and speed from compatible trackers |
@@ -63,6 +64,10 @@ No custom servers. No recurring fees. No ADS. Track unlimited devices, completel
   <img src="screenshots/battery_speed.jpg" alt="Battery and Speed" width="220"/>
 </p>
 
+<p align="center">
+  <img src="screenshots/broadcast.jpg" alt="Broadcast My Location" width="220"/>
+</p>
+
 ---
 
 ## 🔧 How It Works
@@ -79,6 +84,14 @@ GPS Tracker → sends JSON location → Telegram Bot → GpsTrack App → Map
 3. The map updates in real time
 
 The app also supports native **Telegram Live Location** messages — no tracker configuration needed if you just want to share your phone's location.
+
+It also works in reverse — GpsTrack can read your phone's own GPS and broadcast it out the same way, turning your phone into the tracker:
+
+```
+GpsTrack App → broadcasts phone's GPS → Telegram Chat(s) → another GpsTrack instance → Map
+```
+
+See **🛰️ Broadcast My Location** below.
 
 ---
 
@@ -240,6 +253,30 @@ Each zone has toggle chips:
 
 ---
 
+## 🛰️ Broadcast My Location
+
+<p align="center">
+  <img src="screenshots/broadcast.jpg" alt="Broadcast My Location" width="300"/>
+</p>
+
+Turn the process around: instead of watching another device, let GpsTrack read **your own phone's GPS** and send it out over Telegram — so this phone becomes the tracked device for another GpsTrack instance (or anyone watching that chat).
+
+### Setting It Up
+
+1. Tap **⋮** (top right) → **📡 Broadcast My Location**
+2. Tap **+ Add chat** to choose one or more Telegram chats to send your location to
+3. Pick an update interval — **1s, 5s, 15s, 30s, 1m,** or **5m**
+4. Check **Broadcasting enabled** and tap **Save**
+5. Allow the location permission prompt the first time you enable it
+
+Once running, a persistent notification stays visible while broadcasting is active, showing how many chats are currently receiving updates. Each chat gets **one continuously-updated message** rather than being spammed with a new one every tick.
+
+> ℹ️ You can broadcast to as many chats as you like at once, and remove any of them at any time by tapping **✕** next to it in the list.
+
+> ⚠️ Very short intervals (1s–5s) combined with several target chats send a lot of updates in a short time and may occasionally get throttled by Telegram. If you notice missed updates on some chats, try a longer interval.
+
+---
+
 ## ❓ Troubleshooting
 
 **Location updates stop after a few minutes**
@@ -249,10 +286,16 @@ Go to Settings → Apps → GpsTrack → Battery → select **Unrestricted**. Th
 Open a conversation with your tracker bot in the official Telegram app at least once before using GpsTrack.
 
 **Access screen appears after login**
-Make sure you registered with [@White_List_111_bot](https://t.me/White_List_111_bot) by sending `/register` first.
+Make sure you registered with [@White_List_111_bot](https://t.me/White_List_111_bot) by sending `/start` first.
 
 **Map shows no tiles**
 Check your internet connection. The map requires an active connection to load.
+
+**Broadcast My Location won't turn on**
+Make sure you granted the location permission when prompted, and that you've added at least one target chat — broadcasting turns itself off automatically if either is missing. You can check the permission anytime in Settings → Apps → GpsTrack → Permissions.
+
+**Broadcasting stops after a while**
+Same cause as live tracking above — GpsTrack needs to run unrestricted in the background. Go to Settings → Apps → GpsTrack → Battery → select **Unrestricted**.
 
 ---
 
