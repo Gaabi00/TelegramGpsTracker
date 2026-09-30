@@ -297,20 +297,6 @@ Make sure you granted the location permission when prompted, and that you've add
 **Broadcasting stops after a while**
 Same cause as live tracking above — GpsTrack needs to run unrestricted in the background. Go to Settings → Apps → GpsTrack → Battery → select **Unrestricted**.
 
----
-
-## 💛 Support the Project
-
-If you find GpsTrack useful and want to support development, you can send a donation in USDT:
-
-Binance Wallet
-```
-TUFC9s6Sf8npGnJh6jA9YVFjCD5m6X2Lwh
-```
-> ⚠️ Network: **TRON (TRC20)** only. Any amount is appreciated 🙏
-
-
----
 
 ## 📞 Support
 
